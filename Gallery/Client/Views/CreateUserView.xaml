@@ -1,0 +1,39 @@
+﻿<Window x:Class="Client.Views.CreateUserView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="Create New User"
+        Width="400"
+        Height="220"
+        WindowStartupLocation="CenterScreen"
+        Background="#F0F4F8">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Username:" VerticalAlignment="Center" Margin="5" FontSize="12" FontWeight="Bold"/>
+        <TextBox Grid.Column="1" Width="200" Margin="5" Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" FontSize="12" BorderBrush="#B0BEC5" BorderThickness="1" Padding="5" Background="White" />
+
+        <TextBlock Text="Password:" VerticalAlignment="Center" Margin="5" Grid.Row="1" FontSize="12" FontWeight="Bold"/>
+        <PasswordBox Grid.Column="1" Width="200" Margin="5" PasswordChanged="PasswordBox_PasswordChanged" Grid.Row="1" FontSize="12" BorderBrush="#B0BEC5" BorderThickness="1" Padding="5" Background="White" />
+
+        <TextBlock Text="First Name:" VerticalAlignment="Center" Margin="5" Grid.Row="2" FontSize="12" FontWeight="Bold"/>
+        <TextBox Grid.Column="1" Width="200" Margin="5" Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" FontSize="12" BorderBrush="#B0BEC5" BorderThickness="1" Padding="5" Background="White" />
+
+        <TextBlock Text="Last Name:" VerticalAlignment="Center" Margin="5" Grid.Row="3" FontSize="12" FontWeight="Bold"/>
+        <TextBox Grid.Column="1" Width="200" Margin="5" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" FontSize="12" BorderBrush="#B0BEC5" BorderThickness="1" Padding="5" Background="White" />
+
+        <Button Grid.Row="4" IsEnabled="True" Visibility="Visible" Grid.ColumnSpan="2" Width="100" Height="30" Content="Create User" Command="{Binding CreateUserCommand}" HorizontalAlignment="Center" Margin="5" FontSize="12" Background="#4DB6AC" Foreground="White" BorderBrush="#00897B" BorderThickness="1" />
+    </Grid>
+</Window>
