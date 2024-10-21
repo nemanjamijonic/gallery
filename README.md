@@ -29,7 +29,7 @@ The `MyDbContextFactory` class is responsible for providing the `MyDbContext` in
 
 By using this pattern, the application optimizes resource usage and ensures compatibility with Entity Framework, maintaining a single database context throughout its operation.
 
-![singleton rva](https://github.com/user-attachments/assets/af6b32d8-14cf-4616-bf7a-f93a996a66ab)
+![alt text](<singleton rva.png>)
 
 ### Observer
 
@@ -46,7 +46,7 @@ Key components include:
 
 By using this pattern, the system ensures that any changes made to the log messages are immediately reflected in the view models, enabling real-time updates to the UI without the need for manual refreshes or polling.
 
-![observer rva](https://github.com/user-attachments/assets/2d6020f9-dbd5-4a81-b830-57ae96947cdf)
+![alt text](<observer rva.png>)
 
 ### Command
 
@@ -69,4 +69,4 @@ Key components include:
 
 This pattern implementation supports a structured approach to command handling, allowing for flexible, maintainable, and undoable operations within the system.
 
-![command rva](https://github.com/user-attachments/assets/c5302403-e354-49ef-883b-36a0e4e5ef63)
+![alt text](<command rva.png>)
